@@ -3,7 +3,8 @@
 FROM node:alpine
 RUN mkdir -p /opt/app
 WORKDIR /opt/app
-RUN adduser -S app
+RUN chown node:node .
+USER node
 COPY . .
 RUN yarn install
 RUN chown -R app /opt/app
