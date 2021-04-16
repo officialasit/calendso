@@ -4,6 +4,7 @@ FROM node:14.16.1-alpine3.10
 RUN mkdir -p /opt/app
 WORKDIR /opt/app
 
+# Change to node user
 RUN chown node:node .
 USER node
 
