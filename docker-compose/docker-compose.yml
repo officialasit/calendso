@@ -12,6 +12,9 @@ services:
 
   calendso:
     image: calendso
+    command: >
+      sh -c "npx prisma db push --preview-feature
+      && yarn dev"    
     environment:
       DATABASE_URL: 'postgresql://postgres:p0stgr3s_pass@postgres:5432/calendso'
       GOOGLE_API_CREDENTIALS: 'SECRET_KEY_HERE'
