@@ -24,10 +24,7 @@ docker-compose up -d
 
 ## Use the following to add new users.
 ```sh
-docker ps
-
-## Copy docker container ID of calends:latest
-docker exec -it [CONTAINER_ID] /bin/sh
+docker-compose exec calendso sh
 ./startUp.sh 
 ```
 > Prisma Studio Started on Port 5555 | CTRL + c to stop & `exit` 
@@ -36,5 +33,4 @@ docker exec -it [CONTAINER_ID] /bin/sh
 ```bash
 docker-compose down
 ```
-
 
